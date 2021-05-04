@@ -6,8 +6,6 @@ const api_url = (process.env.NODE_ENV == 'dev') ? dev_api_url : prod_api_url ;
 export default class api_base {
 
   constructor (jname) {
-    console.log(process.env)
-    console.log(api_url)
     this.url = api_url;
     this.jname = jname
   }

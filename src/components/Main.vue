@@ -3,9 +3,8 @@
   <div class="wrapper centering">
     <div class="main_div">
       <leftMenu>
-      </leftMenu>
-      <mainContents>
-      </mainContents>
+      </leftMenu> 
+      <router-view></router-view>
     </div>
 
   </div>
@@ -15,17 +14,17 @@
 </div>
 </template>
 <script>
-import master_list from '@/api/master_list.js';
+//import master_list from '@/api/master_list.js';
 //import Header from '@/components/Layout/Header.vue';
 import leftMenu from '@/components/Layout/leftMenu.vue';
-import MainContents from '@/components/Layout/MainContents.vue';
+//import MainContents from '@/components/Layout/MainContents.vue';
 import Loading from '@/components/Parts/Loading.vue';
 
 export default {
   name: 'Main',
   components: {
     leftMenu,
-    MainContents,
+    //MainContents,
    // Header,
     Loading
   },
@@ -36,9 +35,6 @@ export default {
     }
   },
   methods: {
-    save_settings() {
-
-    },
     bootModal(modal_name) {
       this.$modal.show(modal_name);
     }
@@ -59,8 +55,7 @@ export default {
 
   },
   created() {
-    const master = new master_list();
-    console.log(master)
+    //const master = new master_list();
   }
 
 }
