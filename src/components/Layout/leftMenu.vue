@@ -1,9 +1,10 @@
 <template >
   <div class="ubc left">
     <ul>
+      <li>home</li>
       <li>reserve</li>
       <li>score</li>
-      <li></li>
+      <li>link</li>
     </ul>
   </div>
 </template>

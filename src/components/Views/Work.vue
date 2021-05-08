@@ -25,7 +25,7 @@
 import Select from '@/components/Forms/Select.vue';
 
 export default {
-  name: 'MainContents',
+  name: 'Work',
   components:{
     Select
   },

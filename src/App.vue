@@ -2,7 +2,12 @@
   <div>
     <div class="main_div wrapper">
       <leftMenu></leftMenu>
-      <router-view></router-view>
+      <div>
+        <div>
+          header(ログインユーザー情報や経過時間など)
+        </div>
+        <router-view></router-view>
+      </div>
     </div>
     <div v-if="is_loading">
       <Loading></Loading>
