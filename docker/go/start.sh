@@ -12,3 +12,4 @@ sed -i -e "s/__DB_PASS__/$DB_PASS/" /go/src/app/dbconfig.yml
 
 cd /go/src/app
 /go/libs/bin/sql-migrate up
+/bin/bash

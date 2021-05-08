@@ -1,27 +1,25 @@
 # workmanagement2
 
-## Project setup
-```
-npm install
-```
+サーバーサイド go
+フロントエンド vue
 
-### Compiles and hot-reloads for development
+
+### vueに関して
+
+開発時(ホットリーロード)
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+ビルド
 ```
 npm run build
 ```
 
-### Lints and fixes files
+構文チェック
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### ルーティング
 
