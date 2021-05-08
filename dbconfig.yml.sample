@@ -1,0 +1,4 @@
+development:
+    dialect: mysql
+    dir: db/migrations/dev
+    datasource: __DB_USER__:__DB_PASS__@tcp(__DB_HOST__)/__DB_NAME__?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=true

@@ -10,6 +10,10 @@ services:
     tty: true
     environment:
       - GOPATH=/go/libs
+      - DB_HOST
+      - DB_NAME
+      - DB_USER
+      - DB_PASS
     ports:
       - "80:80"  
     networks:

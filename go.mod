@@ -1,4 +1,4 @@
-module api
+module apiServer
 
 go 1.14
 

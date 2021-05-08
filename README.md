@@ -63,3 +63,6 @@ go/libs/bin/sql-migrate down
 
 ### その他のメモ
 @vue/cli 4.5.3で動作確認
+
+sql-migrationのインストールに時間がかかるため、docker-compose up (-dなしの方がわかりやすい)で30秒ぐらい立って
+マイグレーションが実行された後で実行すること

@@ -7,4 +7,5 @@ ENV GO111MODULE=on
 RUN apt-get update -qq && \
     apt-get install -y git
 
-CMD ["/bin/bash"]
+CMD ["/go/src/app/docker/go/start.sh"]
+
