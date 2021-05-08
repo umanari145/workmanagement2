@@ -1,0 +1,46 @@
+version: '3'
+services:
+  app:
+    container_name: "wm_app"
+    build:
+      context: ./docker/go
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/go/src/app"
+    tty: true
+    environment:
+      - GOPATH=/go/libs
+    ports:
+      - "80:80"  
+    networks:
+     - wm
+
+  db:
+    container_name: "wm_db"
+    ports:
+     - "3306:3306"
+    build:
+        context: "./docker/mysql"
+        dockerfile: "Dockerfile"
+    environment:
+      MYSQL_DATABASE: work_management
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+     - wm
+
+  node:
+    container_name: "wm_node"
+    build:
+      context: "./docker/node"
+      dockerfile: Dockerfile
+    volumes:
+        - .:/var/www/html
+    tty: true
+    ports:
+        - "8080:8080"
+
+networks:
+  wm:
+    driver: "bridge"
