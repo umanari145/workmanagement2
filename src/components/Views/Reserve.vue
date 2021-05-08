@@ -1,17 +1,17 @@
 <template>
   <div class="about">
-    <h1>reserve</h1>
+    aaaaajojojojo
   </div>
 </template>
 <script>
 export default {
   name: 'Reserve',
   data() {
-     return {
+    return {
       "work_room":"1",
       "button_message": "",
       "work_state":"1"
-     };
+    };
   },
   methods:{
 

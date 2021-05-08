@@ -1,6 +1,10 @@
 <template >
   <div class="ubc left">
-    aaa
+    <ul>
+      <li>reserve</li>
+      <li>score</li>
+      <li></li>
+    </ul>
   </div>
 </template>
 <script>

@@ -7,11 +7,11 @@ Vue.use(VueRouter)
 
   const routes = [
   {
-    path: '/',
+    path: '/home',
     component: Main
   },
   {
-    path: 'reserve',
+    path: '/reserve',
     component: Reserve
   }
 ];
@@ -19,7 +19,7 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'history',
   hash:false,
-//  base: process.env.BASE_URL,
+  base: process.env.BASE_URL,
   routes
 })
 

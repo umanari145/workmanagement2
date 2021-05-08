@@ -1,17 +1,30 @@
 <template>
   <div>
-    <Main></Main>
+    <div class="main_div wrapper">
+      <leftMenu></leftMenu>
+      <router-view></router-view>
+    </div>
+    <div v-if="is_loading">
+      <Loading></Loading>
+    </div>
   </div>
 </template>
 
 <script>
-import Main from '@/components/Main.vue';
+import leftMenu from '@/components/Layout/leftMenu.vue';
+import Loading from '@/components/Parts/Loading.vue';
 
 export default {
   name: 'App',
   components: {
-    Main
-  }
+    leftMenu,
+    Loading
+  },
+  data() {
+    return {
+      is_loading: null
+    }
+  },
 }
 </script>
 

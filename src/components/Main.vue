@@ -2,35 +2,22 @@
 <div>
   <div class="wrapper centering">
     <div class="main_div">
-      <leftMenu>
-      </leftMenu> 
-      <router-view></router-view>
+      <MainContents></MainContents>
     </div>
-
-  </div>
-  <div v-if="is_loading">
-    <Loading></Loading>
   </div>
 </div>
 </template>
 <script>
 //import master_list from '@/api/master_list.js';
-//import Header from '@/components/Layout/Header.vue';
-import leftMenu from '@/components/Layout/leftMenu.vue';
-//import MainContents from '@/components/Layout/MainContents.vue';
-import Loading from '@/components/Parts/Loading.vue';
+import MainContents from '@/components/Layout/MainContents.vue';
 
 export default {
   name: 'Main',
   components: {
-    leftMenu,
-    //MainContents,
-   // Header,
-    Loading
+    MainContents,
   },
   data() {
     return {
-      is_loading: null,
       score: []
     }
   },
@@ -61,7 +48,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 h3 {
   margin: 40px 0 0;
@@ -98,6 +84,4 @@ li {
 a {
   color: #42b983;
 }
-
-
 </style>

@@ -1,4 +1,5 @@
-import Vue from 'vue'
+import Vue from 'vue';
+import App from '@/App.vue';
 import VModal from 'vue-js-modal';
 import router from "@/router/index.js";
 import BootstrapVue from 'bootstrap-vue';
@@ -11,7 +12,7 @@ Vue.use(BootstrapVue);
 Vue.use(VModal);
 
 new Vue({
-  el:"#app",
-  store,
-  router
-})
+  router,
+  render: h => h(App),
+  store
+}).$mount('#app')
