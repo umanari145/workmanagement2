@@ -9,7 +9,7 @@ services:
       - ".:/go/src/app"
     tty: true
     environment:
-      - GOPATH=/go/libs
+      - GOPATH=/go/libs    
       - DB_HOST
       - DB_NAME
       - DB_USER
