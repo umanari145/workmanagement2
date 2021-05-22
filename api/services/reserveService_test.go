@@ -21,7 +21,6 @@ func TestPersistReserve(t *testing.T) {
 	reserve.UserID = 1
 	reserve.StartReserveDate = time.Now()
 	reserve.EndReserveDate = time.Now()
-	reserve.Type = entity.COMMUTING
 	reserve.Created = time.Now()
 	reserve.Modified = time.Now()
 	persistReserve(reserve)

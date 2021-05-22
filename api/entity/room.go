@@ -19,11 +19,11 @@ const (
 //Room は部屋データ
 type Room struct {
 	ID       int        `json:"id"`
-	RoomName int        `json:"room_name"`
-	Address  int        `json:"address"`
+	RoomName string     `json:"room_name"`
+	Address  string     `json:"address"`
 	Type     RoomType   `json:"type"`
 	Status   RoomStatus `json:"status"`
-	Note     time.Time  `json:"note"`
+	Note     string     `json:"note"`
 	Created  time.Time  `json:"created"`
 	Modified time.Time  `json:"modified"`
 }
