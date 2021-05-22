@@ -49,13 +49,13 @@ https://qiita.com/k-kurikuri/items/946e2bf8c79176ef3ff0
 /go/libs/bin/sql-migrate status
 
 #マイグレーションファイル作成
-go/libs/bin/sql-migrate new ファイル名
+/go/libs/bin/sql-migrate new ファイル名
 
 #マイグレーション実行
-go/libs/bin/sql-migrate up
+/go/libs/bin/sql-migrate up
 
 #マイグレーション戻し(1stepのみ)
-go/libs/bin/sql-migrate down
+/go/libs/bin/sql-migrate down
 
 ```
 
@@ -64,3 +64,11 @@ go/libs/bin/sql-migrate down
 
 sql-migrationのインストールに時間がかかるため、docker-compose up (-dなしの方がわかりやすい)で30秒ぐらい立って
 マイグレーションが実行された後で実行すること
+
+
+### go-enum
+enum
+https://text.baldanders.info/golang/enumeration/
+
+### 継承
+https://zenn.dev/kanatakita/articles/9cb1e7a043b7a2784bf9

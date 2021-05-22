@@ -3,7 +3,6 @@ package services
 import (
 	"apiServer/api/entity"
 	"apiServer/api/util"
-	"time"
 
 	"github.com/go-easylog/el"
 )
@@ -23,7 +22,7 @@ func getReserve() entity.Reserve {
 }
 
 //persistReserve は予約の登録
-func persistReserve() error {
+func persistReserve(reserve entity.Reserve) error {
 
 	dbCon, err := util.Connect()
 	defer dbCon.Close()
@@ -31,18 +30,8 @@ func persistReserve() error {
 		el.Errorf("予約登録処理の接続処理に失敗ました。")
 		return nil
 	}
-
 	el.Info("persistReserve start")
-	reserve := entity.Reserve{}
-	reserve.RoomID = 1
-	reserve.UserID = 1
-	reserve.StartReserveDate = time.Now()
-	reserve.EndReserveDate = time.Now()
-	reserve.Created = time.Now()
-	reserve.Modified = time.Now()
-
 	dbCon = dbCon.Create(&reserve)
-
 	if dbCon.Error != nil {
 		el.Errorf("予約登録処理の登録処理に失敗しました %s", dbCon.Error)
 	}

@@ -1,8 +1,10 @@
 package services
 
 import (
+	"apiServer/api/entity"
 	"fmt"
 	"testing"
+	"time"
 
 	"github.com/go-easylog/el"
 )
@@ -14,6 +16,13 @@ func TestGetReserve(t *testing.T) {
 
 func TestPersistReserve(t *testing.T) {
 	el.SetLogLevel(el.TRACE)
-	reserve := persistReserve()
-	fmt.Println(reserve)
+	reserve := entity.Reserve{}
+	reserve.RoomID = 1
+	reserve.UserID = 1
+	reserve.StartReserveDate = time.Now()
+	reserve.EndReserveDate = time.Now()
+	reserve.Type = entity.COMMUTING
+	reserve.Created = time.Now()
+	reserve.Modified = time.Now()
+	persistReserve(reserve)
 }
