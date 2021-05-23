@@ -21,7 +21,7 @@ func TestPersistRoom(t *testing.T) {
 	}
 
 	rand.Seed(time.Now().UnixNano())
-	roomTypes := []entity.RoomType{entity.COMMUTING, entity.ISHOME}
+	roomTypes := []entity.RoomType{entity.FORROOM, entity.ATHOME}
 	roomStatus := []entity.RoomStatus{entity.USING, entity.ISSTOPPED, entity.ISDELETE}
 
 	for i := 0; i < 5; i++ {

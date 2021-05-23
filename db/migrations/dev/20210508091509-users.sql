@@ -11,6 +11,7 @@ CREATE TABLE `users` (
   `user_type` smallint(6) DEFAULT '1',
   `working_type` tinyint(4) DEFAULT NULL,
   `area_type` tinyint(4) DEFAULT NULL,
+  `status` tinyint(4) DEFAULT '10',
   `created` timestamp NULL DEFAULT NULL,
   `modified` timestamp NULL DEFAULT NULL,
   `ip` varchar(100) DEFAULT NULL,

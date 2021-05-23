@@ -7,13 +7,13 @@ const (
 	USING RoomStatus = 10
 	//ISSTOPPED 停止
 	ISSTOPPED RoomStatus = 50
-	//ISDELETE 削除
-	ISDELETE RoomStatus = 99
+	//ROOMISDELETE 削除
+	ROOMISDELETE RoomStatus = 99
 
-	//COMMUTING 通勤
-	COMMUTING RoomType = 10
-	//ISHOME 在宅
-	ISHOME RoomType = 20
+	//FORROOM 通勤
+	FORROOM RoomType = 10
+	//ATHOME 在宅
+	ATHOME RoomType = 20
 )
 
 //Room は部屋データ
